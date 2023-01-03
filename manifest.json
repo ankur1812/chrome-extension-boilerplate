@@ -1,0 +1,35 @@
+{
+  "name": "__your-chrome-extension-name",
+  "description": "__your-extension-info",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["contentScript.css"],
+      "js": ["contentScript.js"], 
+      "exclude_matches": []
+    }
+  ],
+  "permissions": ["storage", "activeTab", "scripting"],
+  "options_page": "options.html",			
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/get_started32.png",
+      "32": "/images/get_started32.png",
+      "48": "/images/get_started32.png",
+      "128": "/images/get_started32.png"
+    }
+  },
+  "icons": {
+    "16": "/images/get_started32.png",
+    "32": "/images/get_started32.png",
+    "48": "/images/get_started32.png",
+    "128": "/images/get_started32.png"
+  }
+
+}
